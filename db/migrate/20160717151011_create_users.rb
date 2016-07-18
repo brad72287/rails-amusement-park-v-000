@@ -4,10 +4,10 @@ class CreateUsers < ActiveRecord::Migration
       t.string :name
       t.string :password
       t.string :password_digest
-      t.integer :nausea
-      t.integer :happiness
-      t.integer :tickets
-      t.integer :height
+      t.integer :nausea, :default => 0
+      t.integer :happiness, :default => 0
+      t.integer :tickets, :default => 0
+      t.integer :height, :default => 0
 
       t.timestamps null: false
     end

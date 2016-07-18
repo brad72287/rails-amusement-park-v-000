@@ -22,4 +22,12 @@ class Ride < ActiveRecord::Base
       message
     end
   end
+  
+  def too_short?
+    user.height < attraction.min_height
+  end
+  
+  def not_enough_tickets?
+    (user.tickets - attraction.tickets) < 0
+  end
 end
